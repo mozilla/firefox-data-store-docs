@@ -12,22 +12,22 @@
 
 5. Firefox for desktop utilises 10 different data storage formats. These are
 
-1. SQLite
-2. Indexeddb
-3. Extensionless character delimited files (AlternateServices, SiteSecurityServices, SecurityPreloadState)
-4. JSON
-5. .ini
-6. .txt
-7. .dat
-8. .rdf
-9. .xml
-10. .js (prefs, sessionstore)
+  1. SQLite
+  2. Indexeddb
+  3. Extensionless character delimited files (AlternateServices, SiteSecurityServices, SecurityPreloadState)
+  4. JSON
+  5. .ini
+  6. .txt
+  7. .dat
+  8. .rdf
+  9. .xml
+  10. .js (prefs, sessionstore)
 
 6. 3 data stores contain only one item of information.
 
-1. Times.json
-2. datareporting/state.json
-3. healthreport/state.json
+  1. Times.json
+  2. datareporting/state.json
+  3. healthreport/state.json
 
 7. Of the data fields stored by desktop, only 8% of them are available to sync. Of data that is synced, desktop syncs 95% of fields, Android 90% and iOS 86%. 
 
@@ -145,152 +145,154 @@ While Firefox is running, your live session is stored in recovery.js**.  **sessi
 
 ```json
 {
-"windows": [
-{
-"tabs": [
-{
-"entries": [
-{
-"url": string,
-"title": string,
-"cacheKey": long,
-"ID": int,
-"docshellID": int,
-"referrer": string,
-"docIdentifier": int,
-"structuredCloneState": string,
-"structuredCloneVersion": int,
-"children": [
-{
-"url": string,
-"ID": int,
-"docshellID": int,
-"owner_b64": string,
-"docIdentifier": int
-},
-}
-],
-"lastAccessed": long,
-"hidden": bool,
-"attributes": {
-},
-"image": string,
-"index": int,
-"storage": {
-"<url>": {
-"ScribeTransport": string
-}
-},
-"formdata": {
-"xpath": {
-"<path>": string
-},
-"id": {
-"age-gate-year": {
-"selectedIndex": int,
-"value": string
-},
-"age-gate-month": {
-"selectedIndex": int,
-"value": string
-},
-"age-gate-day": {
-"selectedIndex": int,
-"value": string
-}
-},
-"url": string
-},
-"scroll": {
-"children": [
-{
-"scroll": stringint
-}
-]
-},
-},
-"selected": int,
-"_closedTabs": [
-{
-"state": {
-"entries": [
-{
-"url": string,
-"title": string,
-"cacheKey": long,
-"ID": int,
-"docshellID": int,
-"referrer": string,
-"docIdentifier": int,
-"structuredCloneState": string,
-"structuredCloneVersion": int,
-"children": [
-{
-"url": string,
-"ID": int,
-"docshellID": int,
-"owner_b64": string,
-"docIdentifier": int
-},
-]
-}
-],
-"lastAccessed": long,
-"userTypedValue": string,
-"userTypedClear": int,
-"hidden": bool,
-"attributes": {
-},
-"image": string,
-"index": int,
-"pageStyle": {
-"pageStyle": string
-},
-"scroll": {
-"scroll": string
-}
-},
-"title": string,
-"image": string,
-"pos": int,
-"closedAt": long
-}
-],
-"busy": bool,
-"width": string,
-"height": string,
-"screenX": string,
-"screenY": string,
-"sizemode": string
-}
-],
-"selectedWindow": int,
-"_closedWindows": [
-{
-tabs: [
-{
-entries: [
-{
-url: string,
-triggeringPrincipal_base64: string,
-title: string
-}
-]
-}
-],
-selected: 2,
-title: "mozilla.org",
-_closedTabs: []
-},
-],
-"session": {
-"lastUpdate": long,
-"startTime": long,
-"recentCrashes": int
-},
-"scratchpads": [ string ],
-"global": {
-}
+  "windows": [
+    {
+      "tabs": [
+        {
+          "entries": [
+            {
+              "url": string,
+              "title": string,
+              "cacheKey": long,
+              "ID": int,
+              "docshellID": int,
+              "referrer": string,
+              "docIdentifier": int,
+              "structuredCloneState": string,
+              "structuredCloneVersion": int,
+              "children": [
+                {
+                  "url": string,
+                  "ID": int,
+                  "docshellID": int,
+                  "owner_b64": string,
+                  "docIdentifier": int
+                },
+              ]
+            }
+          ],
+          "lastAccessed": long,
+          "hidden": bool,
+          "attributes": {
+          },
+          "image": string,
+          "index": int,
+          "storage": {
+            "<url>": {
+              "ScribeTransport": string
+            }
+          },
+          "formdata": {
+            "xpath": {
+              "<path>": string
+            },
+            "id": {
+              "age-gate-year": {
+                "selectedIndex": int,
+                "value": string
+              },
+              "age-gate-month": {
+                "selectedIndex": int,
+                "value": string
+              },
+              "age-gate-day": {
+                "selectedIndex": int,
+                "value": string
+              }
+            },
+            "url": string
+          },
+          "scroll": {
+            "children": [
+              {
+                "scroll": stringint
+              }
+            ]
+          },
+        },
+      "selected": int,
+      "_closedTabs": [
+        {
+          "state": {
+            "entries": [
+              {
+                  "url": string,
+                  "title": string,
+                  "cacheKey": long,
+                  "ID": int,
+                  "docshellID": int,
+                  "referrer": string,
+                  "docIdentifier": int,
+                  "structuredCloneState": string,
+                  "structuredCloneVersion": int,
+                  "children": [
+                    {
+                      "url": string,
+                      "ID": int,
+                      "docshellID": int,
+                      "owner_b64": string,
+                      "docIdentifier": int
+                    },
+                ]
+              }
+            ],
+            "lastAccessed": long,
+            "userTypedValue": string,
+            "userTypedClear": int,
+            "hidden": bool,
+            "attributes": {
+            },
+            "image": string,
+            "index": int,
+            "pageStyle": {
+              "pageStyle": string
+            },
+            "scroll": {
+              "scroll": string
+            }
+          },
+          "title": string,
+          "image": string,
+          "pos": int,
+          "closedAt": long
+        }
+      ],
+      "busy": bool,
+      "width": string,
+      "height": string,
+      "screenX": string,
+      "screenY": string,
+      "sizemode": string
+    }
+  ],
+  "selectedWindow": int,
+  "_closedWindows": [
+      {
+        tabs: [
+          { 
+            entries: [
+              {
+                url: string, 
+                triggeringPrincipal_base64: string, 
+                title: string 
+              }
+            ] 
+          }
+        ],
+        selected: 2,
+        title: "mozilla.org",
+        _closedTabs: []
+      },
+  ],
+  "session": {
+    "lastUpdate": long,
+    "startTime": long,
+    "recentCrashes": int
+  },
+  "scratchpads": [ string ],
+  "global": {
+    
+  }
 }
 ```
 
