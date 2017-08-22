@@ -2,15 +2,15 @@
 
 # TL;DR
 
-1. Firefox desktop has 45 separate data stores. In contrast Firefox for iOS has 5 and Firefox for Android has 2.
+* Firefox desktop has 45 separate data stores. In contrast Firefox for iOS has 5 and Firefox for Android has 2.
 
-2. Only 9 shared domain objects can be found on all 3 platforms. One of those, favicons, is present but not synced at all. 
+* Only 9 shared domain objects can be found on all 3 platforms. One of those, favicons, is present but not synced at all. 
 
-3. Firefox desktop has an entire SQLite database, Storage.sqlite, that contains no tables. It is used entirely to reference the schema version value and uses that value to create the version number for the Storage directory.
+* Firefox desktop has an entire SQLite database, Storage.sqlite, that contains no tables. It is used entirely to reference the schema version value and uses that value to create the version number for the Storage directory.
 
-4. Firefox desktop stores well over 1000 preferences in a single, synchronously accessed file. This file is read from and written to from all over the application. Every single write will cause the entire file to be written to disk.
+* Firefox desktop stores well over 1000 preferences in a single, synchronously accessed file. This file is read from and written to from all over the application. Every single write will cause the entire file to be written to disk.
 
-5. Firefox for desktop utilises 10 different data storage formats. These are
+* Firefox for desktop utilises 10 different data storage formats. These are
 
   1. SQLite
   2. Indexeddb
@@ -23,13 +23,13 @@
   9. .xml
   10. .js (prefs, sessionstore)
 
-6. 3 data stores contain only one item of information.
+* 3 data stores contain only one item of information.
 
   1. Times.json
   2. datareporting/state.json
   3. healthreport/state.json
 
-7. Of the data fields stored by desktop, only 8% of them are available to sync. Of data that is synced, desktop syncs 95% of fields, Android 90% and iOS 86%. 
+* Of the data fields stored by desktop, only 8% of them are available to sync. Of data that is synced, desktop syncs 95% of fields, Android 90% and iOS 86%. 
 
 # Desktop Data Stores
 
