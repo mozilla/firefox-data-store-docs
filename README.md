@@ -65,7 +65,24 @@ Stores data entered into forms.
 
 ### `kinto.sqlite`
 
-Store for enabling syncing of data through Kinto.
+Backing store for the blocklists code in the client. These lists
+represent addons, certificates, graphics drivers, and plugins which we
+should be careful not to trust, as well as "pinned" certificates we
+should trust. This local store is updated from a server periodically.
+It has the unfortunate name of "kinto" because this synchronization is
+performed using the Kinto server and client libraries. Because Kinto
+is an object store, the SQL schema is not especially helpful.
+
+![image alt text](image_5.png)
+
+### `storage-sync.sqlite`
+
+Another Kinto-based SQLite store, this one supports our implementation
+of the `browser.storage.sync` API. This is just the local store; the
+synchronization happens with a server "in the cloud", of course. See
+https://wiki.mozilla.org/CloudServices/Sync/ExtensionStorage_Design_Doc
+for more information on how extension-storage information is stored in
+Kinto.
 
 ![image alt text](image_5.png)
 
